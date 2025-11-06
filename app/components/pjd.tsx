@@ -46,7 +46,7 @@ const PaymentToggle = () => {
   </div>
 
   <div className="text-gray-700 text-lg space-y-2">
-    <p className="font-medium  sm:text-2xl flex gap-1">
+    <p className="font-medium  sm: flex ">
       Account Number: <span className="font-semibold text-gray-900">639834556</span>
     </p>
     <p className="font-medium sm:text-2xl flex ">
