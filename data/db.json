@@ -1,0 +1,15 @@
+{
+    "dataPlan" : [
+        {
+            "plan" : "1GB",
+            "price" : 520,
+            "duration": "30days"
+
+        },
+        {
+            "plan" : "2GB",
+            "price" : 1000,
+            "duration" : "30 days"
+        }
+    ]
+}

@@ -5,10 +5,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import HeaderPage from "./components/header";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,7 +25,17 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "DataHub websites" },
+    { name: "description", content: "Welcome to React Router!" },
+  ];
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const hideHeader = location.pathname === "/loginPage" || location.pathname === "/signupage";
+
   return (
     <html lang="en">
       <head>
@@ -33,7 +45,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        {!hideHeader && <HeaderPage />}
+        <main>{children}</main>
         <ScrollRestoration />
         <Scripts />
       </body>
