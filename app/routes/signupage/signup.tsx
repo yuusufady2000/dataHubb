@@ -2,9 +2,9 @@ import { Link } from "react-router";
 
 const SignUp = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="flex flex-col w-[26rem] bg-white p-8 rounded-2xl shadow-lg space-y-5">
-        <h1 className="text-center text-2xl font-bold text-gray-800 mb-4">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
+      <div className="flex flex-col w-full max-w-md bg-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-5">
+        <h1 className="text-center text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
           Create your account
         </h1>
 
@@ -17,7 +17,7 @@ const SignUp = () => {
               type="text"
               id="name"
               placeholder="Enter your full name"
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
@@ -29,7 +29,7 @@ const SignUp = () => {
               type="email"
               id="email"
               placeholder="Enter your email"
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
@@ -41,7 +41,7 @@ const SignUp = () => {
               type="tel"
               id="phone"
               placeholder="Enter your phone number"
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
@@ -53,7 +53,7 @@ const SignUp = () => {
               type="password"
               id="password"
               placeholder="Enter your password"
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
@@ -65,13 +65,13 @@ const SignUp = () => {
               type="password"
               id="confirmPassword"
               placeholder="Re-enter your password"
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
 
           <button
             type="submit"
-            className="mt-4 bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-500 transition duration-200"
+            className="mt-4 bg-green-600 text-white font-semibold py-2 sm:py-3 rounded-lg hover:bg-green-500 transition duration-200"
           >
             Sign Up
           </button>
@@ -79,9 +79,9 @@ const SignUp = () => {
 
         <p className="text-sm text-center text-gray-500">
           Already have an account?{" "}
-          <a href="/loginPage" className="text-green-600 hover:underline">
+          <Link to="/loginPage" className="text-green-600 hover:underline">
             Log in
-          </ a>
+          </Link>
         </p>
       </div>
     </div>
