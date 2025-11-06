@@ -4,8 +4,8 @@ import AsidePage from "./aside/aside";
 import Hero from "~/components/hero";
 import PaymentToggle from "~/components/pjd";
 import WalletEarning from "~/components/walletEarning";
-import SellingSection from "~/components/sellingSection";
-import HeaderPage from "~/components/header";
+
+
 
 
 export function meta({}: Route.MetaArgs) {
@@ -34,7 +34,7 @@ export default function Home() {
         </section>
 
         <WalletEarning />
-        <SellingSection />
+        
       </main>
     </div>
   );
